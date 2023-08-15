@@ -1,0 +1,4 @@
+﻿using Core;
+
+CoreLogic.OnProgramStart();
+

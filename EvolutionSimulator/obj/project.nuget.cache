@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "bOdvy9boUSOcNiFZygSNwjJUvetIK9KcilNBOYg/0VEngd7tRIP0509muZvL2Ijay5B1rkQDaGM7/UAVqqEZiw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\atlee\\Documents\\GameDev\\Projects\\EvolutionSimulator\\EvolutionSimulator\\EvolutionSimulator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\atlee\\.nuget\\packages\\raylib-cs\\4.5.0.3\\raylib-cs.4.5.0.3.nupkg.sha512",
+    "C:\\Users\\atlee\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
