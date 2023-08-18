@@ -21,7 +21,7 @@ public class CameraController : Component
             PhysicsBody physicsBody = new()
             {
                 velocity = new Vector2(rnd.Next(-5, 5), rnd.Next(-5, 5)),
-                mass = ballSize,
+                mass = 0.75f * 3.14f * ballSize * ballSize * ballSize,
                 position = mousePosition
             };
             gameEntity1.AddComponent<PhysicsBody>(physicsBody);

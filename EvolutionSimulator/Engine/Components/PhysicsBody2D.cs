@@ -12,7 +12,7 @@ namespace EvolutionSim
 
         public float mass = 1;
         public float radius = 1;
-        public float elastisity = 1f;
+        public float elastisity = 0.5f;
 
         public float viscosity = 0.0f;
 
