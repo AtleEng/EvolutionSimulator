@@ -128,24 +128,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\atlee\\.nuget\\packages\\": {}
+    "C:\\Users\\atle.engelbrektsson\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\atlee\\Documents\\GameDev\\Projects\\EvolutionSimulator\\EvolutionSimulator\\EvolutionSimulator.csproj",
+      "projectUniqueName": "C:\\Users\\atle.engelbrektsson\\Documents\\C#\\EvolutionSimulator\\EvolutionSimulator\\EvolutionSimulator.csproj",
       "projectName": "EvolutionSimulator",
-      "projectPath": "c:\\Users\\atlee\\Documents\\GameDev\\Projects\\EvolutionSimulator\\EvolutionSimulator\\EvolutionSimulator.csproj",
-      "packagesPath": "C:\\Users\\atlee\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\atlee\\Documents\\GameDev\\Projects\\EvolutionSimulator\\EvolutionSimulator\\obj\\",
+      "projectPath": "C:\\Users\\atle.engelbrektsson\\Documents\\C#\\EvolutionSimulator\\EvolutionSimulator\\EvolutionSimulator.csproj",
+      "packagesPath": "C:\\Users\\atle.engelbrektsson\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\atle.engelbrektsson\\Documents\\C#\\EvolutionSimulator\\EvolutionSimulator\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\atlee\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\atle.engelbrektsson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -185,7 +192,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.411\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

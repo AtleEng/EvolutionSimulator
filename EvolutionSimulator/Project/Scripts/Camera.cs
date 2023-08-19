@@ -53,6 +53,15 @@ public class CameraController : Component
         {
             Camera.position.X -= cameraMoveSpeed * Time.deltaTime / Camera.zoom;
         }
+        float zoomFactor = 0.01f;
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT_SHIFT))
+        {
+            zoomFactor = -0.01f;
+        }
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_Z))
+        {
+            Camera.zoom += zoomFactor;
+        }
         Camera.zoom += Raylib.GetMouseWheelMove() / 100;
 
         Camera.zoom = Math.Clamp(Camera.zoom, 0.02f, 5);
