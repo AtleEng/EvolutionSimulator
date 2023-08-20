@@ -48,8 +48,8 @@ namespace EvolutionSim
             virtualMousePosition.X = Math.Clamp(virtualMousePosition.X, 0f, WindowSettings.gameScreenWidth);
             virtualMousePosition.Y = Math.Clamp(virtualMousePosition.Y, 0f, WindowSettings.gameScreenHeight);
 
-            virtualMousePosition.X = PixelsToBaseUnits((virtualMousePosition.X - WindowSettings.gameScreenWidth / 2) / Camera.zoom);
-            virtualMousePosition.Y = PixelsToBaseUnits((virtualMousePosition.Y - WindowSettings.gameScreenHeight / 2) / Camera.zoom);
+            virtualMousePosition.X = ((virtualMousePosition.X - WindowSettings.gameScreenWidth / 2) / Camera.zoom)/100;
+            virtualMousePosition.Y = ((virtualMousePosition.Y - WindowSettings.gameScreenHeight / 2) / Camera.zoom)/100;
 
             virtualMousePosition += Camera.position;
 
@@ -61,7 +61,7 @@ namespace EvolutionSim
             int pixels = (int)(units * 100);
             return pixels;
         }
-        public static float PixelsToBaseUnits(float pixels)
+        public static float PixelsToBaseUnits(int pixels)
         {
             float units = (float)pixels / 100;
             return units;

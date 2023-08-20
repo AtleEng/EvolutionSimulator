@@ -6,7 +6,11 @@ namespace EvolutionSim
 {
     public class ColliderComponent : Component
     {
-        public float radius;
+        Vector2[] worldPoints;
+        Vector2 offsetPos;
+        float angle;
+        Vector2[] originPoints;
+        bool isOverlaping;
     }
-    
+
 }

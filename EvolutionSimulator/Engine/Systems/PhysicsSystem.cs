@@ -56,7 +56,7 @@ namespace Core
                 //Broad Phase
 
                 //Narrow Phase
-                SolveCollisions();
+                SolveCollisionsForCircles();
                 ApplyConstraint();
             }
             //Uppdate parent
@@ -66,7 +66,7 @@ namespace Core
             }
         }
 
-        void SolveCollisions()
+        void SolveCollisionsForCircles()
         {
             for (int i = 0; i < physicsBodies.Count; i++)
             {

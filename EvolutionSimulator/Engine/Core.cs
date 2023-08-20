@@ -15,9 +15,15 @@ namespace Core
         {
             ECSSystem.Innit();
 
-            GameEntity CameraEntity = new();
-            CameraEntity.AddComponent<CameraController>(new CameraController());
-            EntityManager.SpawnEntity(CameraEntity, Vector2.Zero, Vector2.One, 0);
+            GameEntity player = new();
+            
+            player.AddComponent<PlayerController>(new PlayerController());
+            player.AddComponent<ColliderComponent>(new ColliderComponent());
+            EntityManager.SpawnEntity(player, Vector2.Zero, Vector2.One, 0);
+
+            GameEntity camera = new();
+            camera.AddComponent<CameraController>(new CameraController());
+            EntityManager.SpawnEntity(camera, Vector2.Zero, Vector2.One, 0);
 
             while (shouldClose == false)
             {

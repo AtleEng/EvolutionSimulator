@@ -9,31 +9,6 @@ public class CameraController : Component
     public override void Update()
     {
         CameraControll();
-
-        if (Raylib.IsMouseButtonDown(MouseButton.MOUSE_BUTTON_LEFT))
-        {
-            Vector2 mousePosition = WorldSpace.GetVirtualMousePos();
-
-            float ballSize = ((float)rnd.Next(5, 50)) / 10;
-
-            GameEntity gameEntity1 = new();
-
-            PhysicsBody physicsBody = new()
-            {
-                velocity = new Vector2(rnd.Next(-5, 5), rnd.Next(-5, 5)),
-                mass = 0.75f * 3.14f * ballSize * ballSize * ballSize,
-                position = mousePosition
-            };
-            gameEntity1.AddComponent<PhysicsBody>(physicsBody);
-
-            SpriteRenderer spriteRenderer = new SpriteRenderer
-            {
-                drawingAction = SpriteRenderer.Circle
-            };
-            gameEntity1.AddComponent<SpriteRenderer>(spriteRenderer);
-
-            EntityManager.SpawnEntity(gameEntity1, mousePosition, new Vector2(ballSize, ballSize), 0);
-        }
     }
     void CameraControll()
     {
@@ -65,5 +40,35 @@ public class CameraController : Component
         Camera.zoom += Raylib.GetMouseWheelMove() / 100;
 
         Camera.zoom = Math.Clamp(Camera.zoom, 0.02f, 5);
+
+        if (Raylib.IsMouseButtonDown(MouseButton.MOUSE_BUTTON_LEFT))
+        {
+            SpawObject();
+        }
+    }
+
+    void SpawObject()
+    {
+        Vector2 mousePosition = WorldSpace.GetVirtualMousePos();
+
+        float ballSize = ((float)rnd.Next(5, 50)) / 10;
+
+        GameEntity gameEntity1 = new();
+
+        PhysicsBody physicsBody = new()
+        {
+            velocity = new Vector2(rnd.Next(-5, 5), rnd.Next(-5, 5)),
+            mass = 0.75f * 3.14f * ballSize * ballSize * ballSize,
+            position = mousePosition
+        };
+        gameEntity1.AddComponent<PhysicsBody>(physicsBody);
+
+        SpriteRenderer spriteRenderer = new SpriteRenderer
+        {
+            drawingAction = SpriteRenderer.Circle
+        };
+        gameEntity1.AddComponent<SpriteRenderer>(spriteRenderer);
+
+        EntityManager.SpawnEntity(gameEntity1, mousePosition, new Vector2(ballSize, ballSize), 0);
     }
 }
